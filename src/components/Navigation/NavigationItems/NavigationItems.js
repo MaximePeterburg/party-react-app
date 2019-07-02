@@ -1,18 +1,40 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
+import Aux from '../../../hoc/Auxiliary/Auxiliary';
 import NavigationItem from './NavigationItem/NavigationItem';
-import classes from './NavigationItems.module.css';
 
 const navigationItems = props => (
-  <ul className={classes.NavigationItems}>
-    <NavigationItem link="/posts">Posts</NavigationItem>
-    <NavigationItem link="/" exact>
-      Party
-    </NavigationItem>
-    <NavigationItem link="/Libertarianism">Libertarianism</NavigationItem>
-    <NavigationItem link="/apply">Apply</NavigationItem>
-    <NavigationItem link="/donate">Donate</NavigationItem>
-  </ul>
+  <Aux>
+    <Container>
+      <Row>
+        <Col xs="4">
+          <NavigationItem link="/" exact>
+            Logo
+          </NavigationItem>
+        </Col>
+        <Col xs="1">
+          <NavigationItem link="/posts">Posts</NavigationItem>
+        </Col>
+        <Col xs="1">
+          <NavigationItem link="/" exact>
+            Party
+          </NavigationItem>
+        </Col>
+        <Col xs="4">
+          <NavigationItem link="/Libertarianism">Libertarianism</NavigationItem>
+        </Col>
+        <Col xs="1">
+          <NavigationItem link="/apply">Apply</NavigationItem>
+        </Col>
+        <Col xs="1">
+          <NavigationItem link="/donate">Donate</NavigationItem>
+        </Col>
+      </Row>
+    </Container>
+  </Aux>
 );
 
 export default navigationItems;
