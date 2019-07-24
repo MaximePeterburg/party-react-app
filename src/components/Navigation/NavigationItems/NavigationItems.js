@@ -3,18 +3,21 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import Logo from '../../../components/Logo/Logo';
 import Aux from '../../../hoc/Auxiliary/Auxiliary';
 import NavigationItem from './NavigationItem/NavigationItem';
+import classes from './NavigationItems.module.css';
 
 const navigationItems = props => (
   <Aux>
     <Container>
-      <Row>
-        <Col xs="4">
+      <Row className={classes.Toolbar}>
+        <Col xs="1">
           <NavigationItem link="/" exact>
-            Logo
+            <Logo />
           </NavigationItem>
         </Col>
+        <Col xs="3" />
         <Col xs="1">
           <NavigationItem link="/posts">Posts</NavigationItem>
         </Col>
@@ -23,9 +26,10 @@ const navigationItems = props => (
             Party
           </NavigationItem>
         </Col>
-        <Col xs="4">
+        <Col xs="2">
           <NavigationItem link="/Libertarianism">Libertarianism</NavigationItem>
         </Col>
+        <Col xs="2" />
         <Col xs="1">
           <NavigationItem link="/apply">Apply</NavigationItem>
         </Col>

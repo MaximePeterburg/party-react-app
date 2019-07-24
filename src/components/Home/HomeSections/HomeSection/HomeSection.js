@@ -1,11 +1,16 @@
 import React from 'react';
-import classes from './HomeSection.module.css';
+import Col from 'react-bootstrap/Col';
 
-const homeSection = props => (
-  <div className={classes.HomeSection}>
-    <div className={classes.Label}>{props.label}</div>
-    <div className={classes.TextPreview}>{props.textPreview}</div>
-  </div>
-);
+import Programme from '../../../../assets/pdfs/Programme.pdf';
+import Platform from '../../../../assets/pdfs/Platform.pdf';
+
+const homeSection = props => {
+  return (
+    <Col xs="4">
+      <h2>{props.label}</h2>
+      <p>{props.textPreview}</p>
+    </Col>
+  );
+};
 
 export default homeSection;
